@@ -12,7 +12,7 @@ var myHash = new ObjectKeyHash();
 var objUI = {
     type: 'UI',
     doSomething: function (model) {
-        alert(model.name);
+        console.log(model.name);
     }
 };
 
@@ -31,4 +31,4 @@ var myUI = myHash.getAssociatedObject(objModel);
 //log the type for each
 console.log(myModel.type); //Logs -> "UI"
 console.log(myUI.type);    //Logs -> "Model"
-myUI.doSomething(myModel); //Alerts -> "Potato"
+myUI.doSomething(myModel); //Logs -> "Potato"
